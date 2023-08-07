@@ -1,0 +1,57 @@
+{
+	"parser": "@typescript-eslint/parser",
+	"extends": [
+		"airbnb",
+		"prettier",
+		"eslint:recommended",
+		"plugin:react/jsx-runtime",
+		"plugin:react-hooks/recommended",
+		"plugin:@typescript-eslint/eslint-recommended",
+		"plugin:@typescript-eslint/recommended"
+	],
+	"parserOptions": {
+		"ecmaVersion": 2018,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"plugins": ["prettier"],
+	"rules": {
+		"prettier/prettier": ["warn", {
+			"endOfLine":"auto"
+		  }],
+		"react/prop-types": "off",
+		"react/require-default-props": "off",
+		"react/function-component-definition": [
+			2,
+			{
+				"namedComponents": "arrow-function"
+			}
+		],
+		"react/jsx-props-no-spreading": "off",
+		"react/jsx-filename-extension": [
+			2,
+			{ "extensions": [".ts", ".tsx", ".js", ".jsx"] }
+		],
+		"quotes": ["warn", "single"],
+		"semi": ["warn", "always"],
+		"indent": "off",
+		"no-else-return": ["error", { "allowElseIf": true }],
+		"no-param-reassign": "off",
+		"no-multi-spaces": "warn",
+		"no-console": "off",
+		"no-unused-vars": "off",
+		"@typescript-eslint/no-unused-vars": ["warn"],
+		"no-shadow": "off",
+		"@typescript-eslint/no-shadow": ["error"],
+		"import/extensions": "off",
+		"import/no-unresolved": "off",
+		"jsx-a11y/anchor-is-valid": "off"
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	}
+}
